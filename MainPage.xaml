@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppHotel.MainPage"
+    Title="App Hotel">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Image
+                Source="hotel.png"
+                HeightRequest="180"
+                Aspect="AspectFill"/>
+
+            <Label
+                Text="Reserva de Hotel"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Data de Check-in"/>
+
+            <DatePicker
+                x:Name="dtEntrada"/>
+
+            <Label
+                Text="Data de Check-out"/>
+
+            <DatePicker
+                x:Name="dtSaida"/>
+
+            <Label
+                Text="Tipo de Quarto"/>
+
+            <Picker
+                x:Name="pkQuarto"
+                Title="Selecione um quarto">
+
+                <Picker.Items>
+                    <x:String>Standard</x:String>
+                    <x:String>Luxo</x:String>
+                    <x:String>Suíte Master</x:String>
+                </Picker.Items>
+
+            </Picker>
+
+            <Label
+                Text="Quantidade de Hóspedes"/>
+
+            <Stepper
+                x:Name="stepHospedes"
+                Minimum="1"
+                Maximum="10"
+                Increment="1"
+                ValueChanged="Stepper_ValueChanged"/>
+
+            <Label
+                x:Name="lblHospedes"
+                Text="1 hóspede"/>
+
+            <Button
+                Text="Reservar"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                Clicked="Reservar_Clicked"/>
+
+            <Button
+                Text="Sobre"
+                BackgroundColor="DarkGreen"
+                TextColor="White"
+                Clicked="Sobre_Clicked"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
